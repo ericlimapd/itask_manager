@@ -4,22 +4,45 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 /* ========= VARIÁVEIS ========= */
 
 :root {
+    --bg-color: #eceadc;
 
+    --text-color: #685643;
+    --text-secondary: #806e5c;
+
+    --shadow: 0 12px 35px rgba(10, 8, 20, .35);
+
+    --transition: .3s ease;
 }
 
 /* ========= CONFIGURAÇÕES GERAIS ========= */
 
-html {
-
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-body {
+ul {
+    list-style: none;
+}
 
+/* ========= CONTAINER ========= */
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+/* ========= TITLE ========= */
+
+.title-container {
+    font-size: 1.6rem;
 }
 
 /* ========= RESPONSIVIDADE ========= */
