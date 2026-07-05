@@ -10,4 +10,18 @@ class Tarefa {
         this.dataCriacao = new Date();
         this.concluida = false;
     }
+
+    renderizar(): HTMLLIElement {
+        const li = document.createElement('li');
+        li.classList.add('tarefa-card');
+
+        li.innerHTML = `
+        <input type="checkbox" class="tarefa-check">
+        <b>${this.titulo}</b>
+        <p>${this.descricao}</p>
+        <small>${this.dataCriacao.toLocaleString()}</small>
+        `;
+
+        return li;
+    }
 }
