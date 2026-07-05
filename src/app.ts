@@ -31,3 +31,8 @@ class Tarefa {
         return li;
     }
 }
+
+const tituloInput = document.getElementById('tituloInput') as HTMLInputElement;
+const descricaoInput = document.getElementById('descricaoInput') as HTMLTextAreaElement;
+const addBtn = document.getElementById('addBtn') as HTMLButtonElement;
+const lista = document.getElementById('lista') as HTMLUListElement;
