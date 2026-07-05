@@ -22,6 +22,12 @@ class Tarefa {
         <small>${this.dataCriacao.toLocaleString()}</small>
         `;
 
+        const checkbox = li.querySelector('.tarefa-check') as HTMLInputElement;
+        checkbox.addEventListener('change', () => {
+            this.concluida = checkbox.checked;
+            li.classList.toggle('concluida', this.concluida);
+        });
+
         return li;
     }
 }
