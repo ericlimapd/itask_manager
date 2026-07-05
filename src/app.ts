@@ -36,3 +36,13 @@ const tituloInput = document.getElementById('tituloInput') as HTMLInputElement;
 const descricaoInput = document.getElementById('descricaoInput') as HTMLTextAreaElement;
 const addBtn = document.getElementById('addBtn') as HTMLButtonElement;
 const lista = document.getElementById('lista') as HTMLUListElement;
+
+addBtn.addEventListener('click', () => {
+    if (tituloInput.value.trim() === '') return;
+
+    const novaTarefa = new Tarefa(tituloInput.value, descricaoInput.value);
+    lista.appendChild(novaTarefa.renderizar());
+
+    tituloInput.value = '';
+    descricaoInput.value = '';
+});
